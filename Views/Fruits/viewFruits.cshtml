@@ -1,0 +1,43 @@
+﻿@model List<Fruits>
+
+
+        <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+  <table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Count</th>
+    <th>Country</th>
+    <th>Taste</th>
+  </tr>
+    @foreach (var v in Model)
+    {
+            <tr>
+            <td>@v.Id</td>
+            <td>@v.name</td>
+                <td>@v.count </td>
+                <td>@v.country</td>
+                        <td>@v.taste</td>
+          </tr>
+
+    }
+
+</table>
